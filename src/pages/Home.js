@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components/Header";
+import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import mainImg from "../assets/img/main-img.png";
 import brandImg from "../assets/img/brand-img.png";

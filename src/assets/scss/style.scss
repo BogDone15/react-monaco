@@ -23,9 +23,15 @@ a {
  max-width: 200px;
  cursor: pointer;
  padding: 24px 0;
+ transition: all .2s linear;
 
  svg {
   transition: all .2s linear;
+ }
+
+ &:hover {
+  border-top: 1px solid #2E4F4D;
+  border-bottom: 1px solid #2E4F4D;
  }
 
  &:hover svg {
@@ -63,6 +69,9 @@ a {
 }
 
 .header {
+ .container {
+  position: relative;
+ }
  &__wrapper {
   position: relative;
   display: flex;
@@ -84,6 +93,8 @@ a {
  &__menu {
   position: relative;
   cursor: pointer;
+  width: 47px;
+  height: 22px;
 
   &::after {
    position: absolute;
@@ -328,6 +339,80 @@ a {
    font-size: 14px;
    line-height: 17px;
    text-transform: uppercase;
+
+   &:hover {
+    text-decoration: underline;
+   }
   }
  }
+}
+
+.hamburger {
+ width: 40px;
+ height: 25px;
+ cursor: pointer;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+ z-index: 31;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-pack: justify;
+ -ms-flex-pack: justify;
+ justify-content: space-between;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+ background-color: #2E4F4D;
+ height: 1.5px;
+ width: 42%;
+ border-radius: 2px;
+ -webkit-transition: all 0.35s ease-in-out;
+ transition: all 0.35s ease-in-out;
+ opacity: 0;
+}
+
+.first {
+ transform: translate(-20px, -21px) rotate(45deg);
+}
+
+.second {
+ transform: translate(41px, -28px) rotate(-45deg);
+}
+
+.third {
+ transform: translate(-19px, 30px) rotate(-45deg);
+}
+
+.fourth {
+ transform: translate(43px, 23px) rotate(45deg);
+}
+
+.is-active.first {
+ transform: translate(6px, 6px) rotate(45deg);
+ opacity: 1;
+}
+
+.is-active.second {
+ transform: translate(18px, -2px) rotate(-45deg);
+ opacity: 1;
+}
+
+.is-active.third {
+ transform: translate(6px, 2px) rotate(-45deg);
+ opacity: 1;
+}
+
+.is-active.fourth {
+ transform: translate(18px, -5px) rotate(45deg);
+ opacity: 1;
 }
