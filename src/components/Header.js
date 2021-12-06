@@ -4,42 +4,46 @@ import { Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import styled from "styled-components";
 import Menu from "./Menu/MenuList";
+import { ProjectConsumer } from "../context";
 
 export default class Header extends Component {
-  state = {
-    menuOpen: true,
-  };
-
-  handleToggle = () => {
-    this.setState({
-      menuOpen: !this.state.menuOpen,
-    });
-  };
-
+  const;
   render() {
     return (
       <HeaderWrapper className="header">
-        <div className="container">
-          <div className="header__wrapper">
-            <img src={logo} alt="MONACO" />
-            <div className="header__menu" onClick={this.handleToggle}>
-              {this.state.menuOpen ? (
-                <p className="header__menu-text">menu</p>
-              ) : (
-                <Hamburger />
-              )}
+        <ProjectConsumer>
+          {(value) => (
+            <div className="container">
+              <div className="header__wrapper">
+                <Link to="/"> 
+                <img src={logo} alt="MONACO" /></Link>
+                <div className="header__menu" onClick={value.handleMenuClick}>
+                  {value.menuOpen ? (
+                    // <Hamburger />
+                    <div className="hamburger">
+                      <span className="first" />
+                      <span className="second" />
+                      <span className="third" />
+                      <span className="fourth" />
+                    </div>
+                    
+                  ) : (
+                    <p className="header__menu-text">menu</p>
+                  )}
+                </div>
+                <ul>
+                  <Link to="/shop" className="header__item">
+                    SEARCH
+                  </Link>
+                  <Link to="/cart" className="header__item">
+                    CART (0)
+                  </Link>
+                </ul>
+              </div>
+              {value.menuOpen ? <Menu /> : null}
             </div>
-            <ul>
-              <Link to="/shop" className="header__item">
-                SEARCH
-              </Link>
-              <Link to="/cart" className="header__item">
-                CART (0)
-              </Link>
-            </ul>
-          </div>
-         <Menu />
-        </div>
+          )}
+        </ProjectConsumer>
       </HeaderWrapper>
     );
   }

@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
-import { Footer } from "../components/Footer";
 import mainImg from "../assets/img/main-img.png";
 import brandImg from "../assets/img/brand-img.png";
 import imageYear from "../assets/img/ImageYear.png";
@@ -14,7 +12,6 @@ import { Link } from "react-router-dom";
 export const Home = () => {
   return (
     <>
-      <Header />
       <HomeWrapper>
         <div className="container">
           <img src={mainImg} alt="MONACO" className="home__img" />
@@ -93,7 +90,6 @@ export const Home = () => {
           <img src={img4} alt="MONACO" className="inside__img-fourth" />
         </div>
       </HomeWrapper>
-      <Footer />
     </>
   );
 };

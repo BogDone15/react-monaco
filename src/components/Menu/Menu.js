@@ -42,6 +42,9 @@ const Nav = styled.nav`
   transform: translateX(-50%);
   width: 100%;
   background: #eae8e3;
+  transition: all .2s linear;
+  opacity: ${({open}) => open ? '0' : '1'};
+  animation-delay: ${props => props.delay};
   ul {
     width: 80%;
     margin: auto;

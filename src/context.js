@@ -2,10 +2,14 @@ import React, { Component } from "react";
 const ProjectConext = React.createContext();
 
 class ProjectProvider extends Component {
-  state = {};
+  state = {
+    menuOpen: false,
+  };
 
   handleMenuClick = () => {
-    console.log("this is handleMenuClick");
+    this.setState(() => {
+      return { menuOpen: !this.state.menuOpen };
+    });
   };
 
   render() {
@@ -22,16 +26,6 @@ class ProjectProvider extends Component {
   }
 }
 
-export function withRoomConsumer(Component) {
- return function ConsumerWrapper(props) {
-   return (
-     <ProjectConsumer>
-       {(value) => <Component {...props} context={value} />}
-     </ProjectConsumer>
-   );
- };
-}
-
 const ProjectConsumer = ProjectConext.Consumer;
 
-export { ProjectProvider, ProjectConext, ProjectConsumer };
+export { ProjectProvider, ProjectConsumer };

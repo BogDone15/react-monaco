@@ -1,6 +1,8 @@
 import React from "react";
 import "./assets/scss/style.scss";
 
+import Header from "./components/Header";
+import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Collection } from "./pages/Collection";
@@ -13,6 +15,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -21,6 +24,7 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="*" element={<Error />} />
         </Routes>
+      <Footer />
       </BrowserRouter>
     </>
   );

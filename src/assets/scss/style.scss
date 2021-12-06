@@ -72,6 +72,7 @@ a {
  .container {
   position: relative;
  }
+
  &__wrapper {
   position: relative;
   display: flex;
@@ -366,53 +367,53 @@ a {
  -webkit-box-pack: justify;
  -ms-flex-pack: justify;
  justify-content: space-between;
-}
 
-.first,
-.second,
-.third,
-.fourth {
- background-color: #2E4F4D;
- height: 1.5px;
- width: 42%;
- border-radius: 2px;
- -webkit-transition: all 0.35s ease-in-out;
- transition: all 0.35s ease-in-out;
- opacity: 0;
-}
+ .first,
+ .second,
+ .third,
+ .fourth {
+  background-color: #2e4f4d;
+  height: 1.5px;
+  width: 42%;
+  border-radius: 2px;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  opacity: 0;
+ }
 
-.first {
- transform: translate(-20px, -21px) rotate(45deg);
-}
+ .first {
+  transform: translate(-20px, -21px) rotate(45deg);
+ }
 
-.second {
- transform: translate(41px, -28px) rotate(-45deg);
-}
+ .second {
+  transform: translate(41px, -28px) rotate(-45deg);
+ }
 
-.third {
- transform: translate(-19px, 30px) rotate(-45deg);
-}
+ .third {
+  transform: translate(-19px, 30px) rotate(-45deg);
+ }
 
-.fourth {
- transform: translate(43px, 23px) rotate(45deg);
-}
+ .fourth {
+  transform: translate(43px, 23px) rotate(45deg);
+ }
 
-.is-active.first {
- transform: translate(6px, 6px) rotate(45deg);
- opacity: 1;
-}
+ .is-active .first {
+  transform: translate(6px, 6px) rotate(45deg);
+  opacity: 1;
+ }
 
-.is-active.second {
- transform: translate(18px, -2px) rotate(-45deg);
- opacity: 1;
-}
+ .is-active .second {
+  transform: translate(18px, -2px) rotate(-45deg);
+  opacity: 1;
+ }
 
-.is-active.third {
- transform: translate(6px, 2px) rotate(-45deg);
- opacity: 1;
-}
+ .is-active .third {
+  transform: translate(6px, 2px) rotate(-45deg);
+  opacity: 1;
+ }
 
-.is-active.fourth {
- transform: translate(18px, -5px) rotate(45deg);
- opacity: 1;
+ .is-active .fourth {
+  transform: translate(18px, -5px) rotate(45deg);
+  opacity: 1;
+ }
 }

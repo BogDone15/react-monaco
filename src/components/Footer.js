@@ -8,7 +8,9 @@ export const Footer = () => {
       <div className="container">
         <div className="footer__wrapper">
           <div className="footer__col">
+            <Link to="/">
             <img src={logo} alt="MONACO" />
+            </Link>
             <p className="footer__text">Ⓒ MONACO 2021</p>
           </div>
           <div className="footer__col">
