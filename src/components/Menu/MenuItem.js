@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 export default class MenuItem extends Component {
   render() {
+    const name = this.props.children.toLowerCase().split(' ', 1).join('');
+
     return (
       <li>
-        <Link to="/">{this.props.children}
+        <Link to={name}>{this.props.children}
         <svg
           width="18"
           height="12"
