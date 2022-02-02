@@ -9,6 +9,7 @@ import { Collection } from "./pages/Collection";
 import Shop from "./pages/Shop";
 import { Error } from "./pages/Error";
 import Cart from "./pages/Cart";
+import Market from "./pages/Market";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/" element={<Shop />} />
+          <Route path="/shop/:slug" element={<Market />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="*" element={<Error />} />
